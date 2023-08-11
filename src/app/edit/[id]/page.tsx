@@ -4,7 +4,7 @@ import axios from "axios";
 const getProductsById = async (id: string) => {
   try {
     const { data } = await axios.get(
-      `${process.env.base_URL}/api/products/edit/${id}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/products/edit/${id}`
     );
     return data;
   } catch (error) {

@@ -24,6 +24,7 @@ function LoginPage() {
     }
 
     if (res?.ok) {
+      router.refresh();
       return router.push("/");
     }
   };

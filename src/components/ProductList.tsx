@@ -4,7 +4,7 @@ import { ProductCard } from "./ProductCard";
 const getProducts = async () => {
   try {
     const { data } = await axios.get(
-      `${process.env.base_URL}/api/products/get`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/products/get`
     );
     return data;
   } catch (error) {
