@@ -1,20 +1,6 @@
-import axios from "axios";
 import { ProductCard } from "./ProductCard";
 
-const getProducts = async () => {
-  try {
-    const { data } = await axios.get(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/products/get`
-    );
-    return data;
-  } catch (error) {
-    console.log("Error loading products", error);
-  }
-};
-
-export default async function ProductList() {
-  const { products } = await getProducts();
-
+export default async function ProductList({ products }: any) {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
       {products.map((product: any) => (
