@@ -3,10 +3,7 @@ import ProductList from "@/components/ProductList";
 
 async function getProducts() {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/products/getProduct`,
-    {
-      cache: "no-store",
-    }
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/products/getProduct`
   );
   const data = await response.json();
   return data;
